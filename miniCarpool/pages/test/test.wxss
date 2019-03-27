@@ -1,0 +1,15 @@
+/* pages/test/test.wxss */
+.top{
+  width: 100%;
+  height: 35pt;
+}
+.list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  width: 100%;
+  height: 50pt;
+  border: 2px solid #F5F5F5
+}

@@ -1,0 +1,16 @@
+<!--pages/test/test.wxml-->
+<!-- 顶部 -->
+<image class='top' src='../../images/test/top.jpg'></image>
+
+<!-- 列表 -->
+<view class='list' wx:for="{{data}}" wx:key=''>
+  <view class='item'>
+     <view class='left'>
+       <text class='no'>提交编号:{{item.no}}</text>
+     </view>
+     <view class='right'>
+       <text class='name'>队伍名称:{{item.name}}</text>
+       <text class='submitTime'>提交时间:{{submitTime}}</text>
+     </view>
+  </view>
+</view>

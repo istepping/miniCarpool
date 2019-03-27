@@ -4,7 +4,16 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    
+    //判断授权信息
+    var token=wx.getStorageSync("token");
+    if(token===null || token===''){
+      wx.login({
+        success(res){
+          
+        }
+      })
+    }
+    //首次登陆
   },
 
   /**
