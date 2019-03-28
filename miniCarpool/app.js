@@ -7,24 +7,25 @@ App({
   onLaunch: function () {
     //判断登陆授权信息
     var token=wx.getStorageSync("token");
-    console.log(token);
     if(token===null || token===''){
       console.log("未登录")
       wx.login({
         success(res){
           wx.request({
-            url: 'http://127.0.0.1:8080/user/login',
+            url: 'https://www.billingf.xyz/carpool/user/login',
             data:{
               code:res.code
             },
             success(res){
-              wx.setStorageSync("token", res.data.data.token)
+              console.log("登陆成功");
+              wx.setStorageSync("token", res.data.data.token);
+              //判断个人信息授权
+              server.getUserInfo();
             }
           })
         }
       })
-    }
-    //判断个人信息授权
+    }   
   },
 
   /**

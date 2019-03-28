@@ -9,13 +9,13 @@ const request=(url,data='',callBack,method='GET')=>{
     return;
   }
 
-  console.log("发出请求:"+actualBaseUrl);//请求日志
+  console.log("发出请求:"+actualUrl);//请求日志
   console.log("请求参数:");
   console.log(data);
   
   //请求数据
   wx.request({
-    url: actualBaseUrl,
+    url: actualUrl,
     data: data,
     method: method,
     header: {
@@ -23,6 +23,8 @@ const request=(url,data='',callBack,method='GET')=>{
       "authorization": token
     },
     success(res){
+      console.log(actualUrl+"请求返回:");
+      console.log(res);
       callBack(res);
     },
     fail(error){
@@ -30,6 +32,33 @@ const request=(url,data='',callBack,method='GET')=>{
     }
   })
 }
+const getUserInfo=()=>{
+  wx.getSetting({
+    success: function (res) {
+      if (res.authSetting['scope.userInfo']) {
+        wx.getUserInfo({
+          success: function (res) {
+            var data = {
+              avatarUrl: res.userInfo.avatarUrl,
+              uCity: res.userInfo.city,
+              country: res.userInfo.country,
+              gender: res.userInfo.gender,
+              language: res.userInfo.language,
+              nickName: res.userInfo.nickName,
+              province: res.userInfo.province
+            }
+            request("/user/addUserInfo", data, function (res) {})
+          }
+        })
+      } else {
+        wx.navigateTo({
+          url: '/pages/login/login',
+        })
+      }
+    }
+  })
+}
 module.exports = {
-  request:request
+  request:request,
+  getUserInfo:getUserInfo
 }
