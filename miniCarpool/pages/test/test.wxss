@@ -6,7 +6,7 @@ page{
 }
 .form{
   width: 100%;
-  height: 850rpx;
+  height: 820rpx;
 }
 .line1{
   margin-left: 120rpx;
@@ -38,7 +38,6 @@ page{
 }
 .submit{
   width: 88%;
-  height: 70rpx;
   margin-top: 5rpx;
   border-radius: 10rpx;
   color: white;
