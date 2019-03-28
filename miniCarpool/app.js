@@ -1,19 +1,30 @@
+var server=require("./utils/server.js");
 App({
 
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    //判断授权信息
+    //判断登陆授权信息
     var token=wx.getStorageSync("token");
+    console.log(token);
     if(token===null || token===''){
+      console.log("未登录")
       wx.login({
         success(res){
-          
+          wx.request({
+            url: 'http://127.0.0.1:8080/user/login',
+            data:{
+              code:res.code
+            },
+            success(res){
+              wx.setStorageSync("token", res.data.data.token)
+            }
+          })
         }
       })
     }
-    //首次登陆
+    //判断个人信息授权
   },
 
   /**
