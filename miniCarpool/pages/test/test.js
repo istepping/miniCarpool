@@ -4,28 +4,7 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-    data:[{
-      no:"001",
-      name:"非同凡想",
-      submitTime:"2019-3-27 23:09:30"
-    },{
-        no: "002",
-        name: "非同凡想",
-        submitTime: "2019-3-27 23:09:30"
-    },{
-        no: "003",
-        name: "非同凡想",
-        submitTime: "2019-3-27 23:09:30"
-    },{
-        no: "004",
-        name: "非同凡想",
-        submitTime: "2019-3-27 23:09:30"
-    },{
-            no:"005",
-      name:"非同凡想",
-      submitTime:"2019-3-27 23:09:30"
-    }]
+  data:{
   },
 
   /**
@@ -34,7 +13,7 @@ Page({
   onLoad: function (options) {
     //设置标题
     wx.setNavigationBarTitle({
-      title: '大作业提交信息',
+      title: '大作业提交',
     })
   },
 
