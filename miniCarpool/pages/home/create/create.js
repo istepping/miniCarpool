@@ -1,4 +1,8 @@
 // pages/home/create/create.js
+/**
+ * @author sunLei
+ * @time 2019/3/29
+ */
 var server=require("../../../utils/server.js");
 Page({
 

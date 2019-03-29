@@ -11,6 +11,8 @@
 }
 .function{
   background-image: url("https://www.billingf.xyz/carpool/images/home_function_back.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   width: 698rpx;
   height: 164rpx;
   margin-left: 28rpx;
@@ -43,18 +45,18 @@
 .help{
    width: 122rpx;
    height: 42rpx;
-   margin-top: 180rpx;
+   margin-top: 170rpx;
    margin-left: 235rpx;
 }
 .line{
   width: 2rpx;
   height: 42rpx;
-  margin-top: 180rpx;
+  margin-top: 170rpx;
   margin-left: 20rpx;
 }
 .suggestion{
   width: 122rpx;
   height: 42rpx;
-  margin-top: 180rpx;
+  margin-top: 170rpx;
   margin-left: 20rpx;
 }

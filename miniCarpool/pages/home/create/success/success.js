@@ -1,4 +1,8 @@
 // pages/home/create/success/success.js
+/**
+ * @author sunLei
+ * @time 2019/3/29
+ */
 Page({
 
   /**

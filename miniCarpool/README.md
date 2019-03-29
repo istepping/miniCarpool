@@ -28,6 +28,13 @@ page{
 @time 2019.3.29
 1. 元素隐藏
 hidden="{{isHidden}}"//isHidden变量
+2. 最新页面
+弹窗功能:
+[弹窗](https://blog.csdn.net/yelin042/article/details/80881618)
+3. 详情
 ————————————————————————
 背记:上传图片功能
 选择器总结
+数据库分页查询
+数据固定分组
+[数组连接](https://www.cnblogs.com/1024zy/p/7281424.html)

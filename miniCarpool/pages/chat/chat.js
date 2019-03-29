@@ -1,8 +1,4 @@
-// pages/home/home.js
-/**
- * @author sunLei
- * @time 2019/3/28
- */
+// pages/chat/chat.js
 Page({
 
   /**
@@ -11,37 +7,7 @@ Page({
   data: {
 
   },
-  //创建拼单
-  createList:function(){
-    wx.navigateTo({
-      url: '/pages/home/create/create',
-    })
-  },
-  goCreatedList:function(){
-  wx.navigateTo({
-      url: '/pages/home/hastory/hastory?id=1',
-    })
-  },
-  goJoinedList:function(){
-    wx.navigateTo({
-      url: '/pages/home/hastory/hastory?id=2',
-    })
-  },
-  goHastoryList:function(){
-    wx.navigateTo({
-      url: '/pages/home/hastory/hastory?id=3',
-    })
-  },
-  goHelp:function(){
-    wx.navigateTo({
-      url: '/pages/home/help/help',
-    })
-  },
-  goSuggesstion:function(){
-    wx.navigateTo({
-      url: '/pages/home/suggestion/suggestion',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,1 +1,73 @@
-/* pages/new/new.wxss */
+/* pages/near/near.wxss */
+.bottom_text{
+  height: 20rpx;
+  width: 100%;
+  font-size: 20rpx;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+.list{
+  width: 640rpx;
+  height:300rpx;
+  margin:auto;
+  margin-top: 45rpx;
+  background-image: url("https://www.billingf.xyz/carpool/images/list_back.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line1{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+}
+.no{
+  width: 200rpx;
+  height: 46rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-left: 23rpx;
+}
+.info{
+  width: 120rpx;
+  height:42rpx;
+  margin-top: 20rpx;
+  margin-left: 120rpx;
+}
+.join{
+  width: 120rpx;
+  height:42rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.line2{
+  height:32rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 300; 
+}
+.modalDlg{
+  width: 680rpx;
+  height: 460rpx;
+  margin: auto;
+  position: fixed;
+  top: 300rpx;
+  left: 35rpx;
+  background-image: url("https://www.billingf.xyz/carpool/images/list_detail.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cancel{
+  width: 32rpx;
+  height:32rpx;
+  margin-top: 20rpx;
+  margin-left: 400rpx;
+}

@@ -1,3 +1,7 @@
+/**
+ * @author sunLei
+ * @time 2019/3/28
+ */
 const baseUrl ="https://www.billingf.xyz/carpool"
 const testUrl ="http://127.0.0.1:8080"
 
@@ -25,9 +29,11 @@ const request=(url,data='',callBack,method='GET')=>{
     success(res){
       console.log(actualUrl+"请求返回:");
       console.log(res);
+      wx.hideLoading();
       callBack(res);
     },
     fail(error){
+      wx.hideLoading();
       console.log(error);//错误日志
     }
   })

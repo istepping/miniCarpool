@@ -9,6 +9,8 @@
   width: 672rpx;
   height: 878rpx;
   background-image:url("https://www.billingf.xyz/carpool/images/create_back.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   margin-top: 40rpx;
   margin-left:40rpx;
   padding-top: 1rpx;
@@ -90,7 +92,7 @@
   font-size: 30rpx;
 }
 .line2{
-  width: 650rpx;
+  width: 680rpx;
   height: 210rpx;
   margin-top: 20rpx;
   margin-left:15rpx;
@@ -98,18 +100,27 @@
 .line3{
   width: 650rpx;
   height: 130rpx;
-  margin-top: 20rpx;
+  margin-top: 40rpx;
   margin-left:15rpx;
+  display: flex;
+  flex-direction: row;
+}
+.label2{
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  margin-left: 10rpx;
+  width: 100rpx;
 }
 .extra{
   width: 500rpx;
   height: 80rpx;
   border: 1rpx solid #e5e5e5;
-  margin-left: 100rpx;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
 }
 .submit{
   width: 280rpx;
   height: 80rpx;
-  margin-top: 40rpx;
+  margin-top: 60rpx;
   margin-left:230rpx;
 }
