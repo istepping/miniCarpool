@@ -1,1 +1,115 @@
 /* pages/home/create/create.wxss */
+.top{
+  width: 286rpx;
+  height: 92rpx;
+  margin-top: 30rpx;
+  margin-left:230rpx;
+}
+.form{
+  width: 672rpx;
+  height: 878rpx;
+  background-image:url("https://www.billingf.xyz/carpool/images/create_back.png");
+  margin-top: 40rpx;
+  margin-left:40rpx;
+  padding-top: 1rpx;
+}
+.line1{
+  width: 650rpx;
+  height: 50rpx;
+  margin-top: 30rpx;
+  margin-left:15rpx;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rpx;
+}
+.label{
+  font-size: 30rpx;
+  margin-top: 7rpx;
+  margin-left: 10rpx;
+}
+.input_content{
+  width: 446rpx;
+  height: 50rpx;
+  border: 1rpx solid #e5e5e5;
+  margin-left: 5rpx;
+}
+.placeholer{
+  font-size: 30rpx;
+
+}
+.icon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 12rpx;
+  margin-left: 30rpx;
+}
+.icon2{
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 12rpx;
+  margin-left: 188rpx;
+}
+.icon3{
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 12rpx;
+  margin-left: 450rpx;
+}
+.line2{
+  width: 650rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+  margin-left:15rpx;
+}
+.picker_content{
+  width: 219rpx;
+  height: 50rpx;
+  border: 1rpx solid #e5e5e5;
+  margin-left: 5rpx;
+  font-size: 30rpx;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 10rpx;
+}
+.number_content{
+  width: 446rpx;
+  height: 50rpx;
+  border: 1rpx solid #e5e5e5;
+  margin-left: 5rpx;
+  font-size: 30rpx;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 10rpx;
+}
+.radio{
+  margin-left: 42rpx;
+  font-size: 30rpx;
+}
+.radio2{
+  margin-left: 13rpx;
+  font-size: 30rpx;
+}
+.line2{
+  width: 650rpx;
+  height: 210rpx;
+  margin-top: 20rpx;
+  margin-left:15rpx;
+}
+.line3{
+  width: 650rpx;
+  height: 130rpx;
+  margin-top: 20rpx;
+  margin-left:15rpx;
+}
+.extra{
+  width: 500rpx;
+  height: 80rpx;
+  border: 1rpx solid #e5e5e5;
+  margin-left: 100rpx;
+}
+.submit{
+  width: 280rpx;
+  height: 80rpx;
+  margin-top: 40rpx;
+  margin-left:230rpx;
+}

@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/home/create/success/success",
+    "pages/home/create/create",
     "pages/home/home",
     "pages/near/near",
     "pages/new/new",
@@ -7,8 +9,6 @@
     "pages/test/test",
     "pages/login/login",
     "pages/home/hastory/hastory",
-    "pages/home/create/create",
-    "pages/home/create/success/success",
     "pages/home/help/help",
     "pages/home/suggestion/suggestion"
   ],

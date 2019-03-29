@@ -7,7 +7,12 @@ Page({
   data: {
 
   },
-
+  goHome:function(){
+    console.log("返回主页")
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

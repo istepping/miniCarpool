@@ -25,6 +25,9 @@ page{
 * align-items 交叉轴对齐方式 竖直
 * flex-wrap 换行方式
 * flex-flow
-
+@time 2019.3.29
+1. 元素隐藏
+hidden="{{isHidden}}"//isHidden变量
 ————————————————————————
 背记:上传图片功能
+选择器总结
