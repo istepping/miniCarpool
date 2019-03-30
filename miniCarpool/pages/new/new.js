@@ -35,11 +35,12 @@ Page({
         if (e.confirm) {
           //加入群聊
           console.log(that.data.carList[res.currentTarget.id]);
-          server.request("/group/joinGroup", { gId: that.data.carList[res.currentTarget.id].gId }, function (res) {
+          var gId = that.data.carList[res.currentTarget.id].gId;
+          server.request("/group/joinGroup", { gId: gId }, function (res) {
             if (res.data.statusCode == "1") {
               //跳转页面
               wx.navigateTo({
-                url: '/pages/chat/chat',
+                url: '/pages/chat/chat?gId=' + gId
               })
             }
           })

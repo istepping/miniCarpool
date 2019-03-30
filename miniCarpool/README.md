@@ -34,7 +34,15 @@ hidden="{{isHidden}}"//isHidden变量
 3. 详情
 ————————————————————————
 背记:上传图片功能
-选择器总结
-数据库分页查询
+选择器总结 
+数据库分页查询 OK
 数据固定分组
 [数组连接](https://www.cnblogs.com/1024zy/p/7281424.html)
+建立群本地缓存
+————————————————————————
+聊天室功能
+sebSocket技术
+1. 界面
+2. webSocket
+[界面](https://blog.csdn.net/java558/article/details/86001064)
+[源码前端+后端](https://github.com/itblingfeng)

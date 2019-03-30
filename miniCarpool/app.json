@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/chat/chat",
     "pages/near/near",
     "pages/home/create/create",
     "pages/home/create/success/success",
-    "pages/home/home",
+    
     "pages/new/new",
     "pages/me/me",
     "pages/test/test",
@@ -11,7 +13,7 @@
     "pages/home/hastory/hastory",
     "pages/home/help/help",
     "pages/home/suggestion/suggestion",
-    "pages/chat/chat"
+    "pages/chat/chatSet/chatSet"
   ],
   "window": {
     "navigationBarBackgroundColor": "#3366FF",

@@ -1,2 +1,29 @@
 <!--pages/chat/chat.wxml-->
-<text>pages/chat/chat.wxml</text>
+<!-- 顶部 -->
+<view class='top'>
+  <view class='line1'>
+    <text class='name'>拼单编号:{{groupInfo.carpoolList.lId}}</text>
+    <text class='number'>人数:{{groupInfo.carpoolList.lNumber}}/{{groupInfo.carpoolList.lMaxNumber}}</text>
+    <image class='set' src='/images/chat/chat_set.png' bindtap='goSet'></image>
+  </view>
+  <view class='line2'>
+    <image class='pull' src='/images/chat/chat_pull.png' bindtap='showDetail'></image>
+  </view>
+</view>
+
+<!-- 中间消息 -->
+<view class='message'>
+  <scroll-view scroll-y="{{true}}" scroll-into-view='{{toView}}' style="height:{{scrollHeight}}">
+    <!-- 循环消息 -->
+    <block wx:key='' wx:for='{{msgList}}'>
+      
+    </block>
+  </scroll-view>
+</view>
+
+<!-- 输入部分 -->
+<view class='bottom'>
+  <input class='input' placeholder='请输入' bindinput='sendChange'></input>
+  <image class='emoj' src='/images/chat/chat_emoj.png' bindtap='emoj'></image>
+  <image class='send' src='/images/chat/chat_send.png' bindtap='send'></image>
+</view>

@@ -19,6 +19,7 @@ App({
             success(res){
               console.log("登陆成功");
               wx.setStorageSync("token", res.data.data.token);
+              wx.setStorageSync("uId", res.data.data.uId);
               //判断个人信息授权
               server.getUserInfo();
             }
