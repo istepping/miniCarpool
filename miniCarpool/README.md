@@ -32,7 +32,10 @@ hidden="{{isHidden}}"//isHidden变量
 弹窗功能:
 [弹窗](https://blog.csdn.net/yelin042/article/details/80881618)
 3. 详情
-————————————————————————
+@time2019.3.30
+view内文本自动换行
+word-break: break-all
+———————————背记—————————————
 背记:上传图片功能
 选择器总结 
 数据库分页查询 OK
@@ -43,6 +46,9 @@ hidden="{{isHidden}}"//isHidden变量
 聊天室功能
 sebSocket技术
 1. 界面
+下拉效果:OK
+文本框效果：
+滑动到最底下:OK
 2. webSocket
 [界面](https://blog.csdn.net/java558/article/details/86001064)
 [源码前端+后端](https://github.com/itblingfeng)
