@@ -35,6 +35,8 @@
         <view class='msg'>
           {{item.msg}}
         </view>
+        <image wx:if="{{item.state==0}}" class='noticeImage' src='/images/chat/loading.gif'></image>
+        <image wx:elif="{{item.state==-1}}" class='noticeImage' src='/images/chat/fail_send.png'></image>
       </view>
        <!-- 左侧消息 -->
        <view class='left' wx:else id='{{item.msgId}}'>
@@ -53,7 +55,7 @@
 
 <!-- 输入部分 -->
 <view class='bottom'>
-  <input class='input' placeholder='请输入' bindinput='sendChange'></input>
+  <input class='input' placeholder='请输入...' bindinput='sendChange' value='{{send_msg}}' placeholder-class='placeholder'></input>
   <image class='emoj' src='/images/chat/chat_emoj.png' bindtap='emoj'></image>
   <image class='send' src='/images/chat/chat_send.png' bindtap='send'></image>
 </view>

@@ -35,6 +35,11 @@ hidden="{{isHidden}}"//isHidden变量
 @time2019.3.30
 view内文本自动换行
 word-break: break-all
+2. 数组追加元素 push
+4. webSocket完成
+阶段打包
+5. Bug修改优化
+[三种方式](https://www.cnblogs.com/meng-ma-blogs/p/8352787.html)
 ———————————背记—————————————
 背记:上传图片功能
 选择器总结 
@@ -44,11 +49,13 @@ word-break: break-all
 建立群本地缓存
 ————————————————————————
 聊天室功能
-sebSocket技术
+sebSocket技术OK
 1. 界面
 下拉效果:OK
-文本框效果：
+文本框效果：OK
 滑动到最底下:OK
+基本推送功能
+完善缓存机制
 2. webSocket
 [界面](https://blog.csdn.net/java558/article/details/86001064)
 [源码前端+后端](https://github.com/itblingfeng)

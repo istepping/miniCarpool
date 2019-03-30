@@ -5,6 +5,7 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
+
     //判断登陆授权信息
     var token=wx.getStorageSync("token");
     if(token===null || token===''){
@@ -21,6 +22,8 @@ App({
               console.log(res)
               wx.setStorageSync("token", res.data.data.token);
               wx.setStorageSync("uId", res.data.data.uId);
+              wx.setStorageSync("avatar", res.data.data.avatar);
+              wx.setStorageSync("nickName", res.data.data.nickName);
               //判断个人信息授权
               server.getUserInfo();
             }
