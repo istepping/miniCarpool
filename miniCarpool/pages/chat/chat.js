@@ -55,9 +55,7 @@ Page({
       })
     }else{
       wx.sendSocketMessage({
-        data: [
-          that.data.send_msg
-        ],
+        data: that.data.send_msg,
       })
       //加入消息
       var time = new Date().getTime();
