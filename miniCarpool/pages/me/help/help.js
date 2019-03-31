@@ -1,4 +1,4 @@
-// pages/home/suggestion/suggestion.js
+// pages/help/help.js
 Page({
 
   /**

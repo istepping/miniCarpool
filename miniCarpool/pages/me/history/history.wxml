@@ -1,0 +1,34 @@
+<!--pages/history_list/history_list.wxml-->
+<scroll-view class='scroll_history_list'
+ scroll-y
+ style="height: 100%;"
+ scroll-top="100rpx">
+
+<block wx:for="{{info}}" wx:key='' wx:for-index="index" wx:for-item="item">
+ <view class='history_list'>
+
+ <view class='history_list_line1'>
+ <view class='history_list_line1_item1'>{{item.list_state}}</view>
+ <view class='history_list_line1_item2'>
+ <image src='{{item.list_clock_png_link}}' class='clock'></image>
+ <text class='time'>{{item.list_time}}</text>
+ <image src='/images/close.png' class='close' bindtap='delete_my_list'></image>
+ </view>
+ </view>
+<view class='history_list_line2'>
+{{item.list_start_place}}
+</view>
+<view class='history_list_line3'>
+<text class='history_list_line3_item1'>{{item.list_people_num}}</text>
+<image src='{{item.list_down_png_link}}' class='history_list_line3_item2'></image>
+<text class='history_list_line3_item3'>{{item.list_method}}</text>
+<view class='history_list_line3_item4'>{{item.list_enter}}</view>
+</view>
+<view class='history_list_line4'>
+{{item.list_end_place}}
+</view>
+<view class='history_list_line5'>{{item.list_remarks}}</view>
+
+ </view>
+ </block>
+ </scroll-view>

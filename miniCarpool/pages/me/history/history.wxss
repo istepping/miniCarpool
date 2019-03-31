@@ -1,0 +1,113 @@
+/* pages/history_list/history_list.wxss */
+.scroll_history_list{
+  display: flex;
+  justify-content: center;
+}
+.history_list{
+  width: 92%;
+  height: 310rpx;
+  margin-left: 3%;
+  margin-right: 5%;
+  margin-top: 50rpx;
+  border-style: solid;
+  border-width: medium;
+  border-color: #cccccc;
+  border-radius: 4%;
+  box-shadow: 1rpx 1rpx 1rpx 1rpx #666666;
+  background: #f2f2f2;
+}
+.history_list_line1{
+  display: flex;
+  background: #f2f2f2;
+  margin-top: 10rpx;
+  border-radius: 4%;
+  height: 58rpx;
+}
+.history_list_line1_item1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140rpx;
+  border-radius: 10%;
+  background: #d7d7d7;
+  margin-left: 10rpx;
+  font-size: 24rpx;
+}
+.history_list_line1_item2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500rpx;
+  margin-left: 6%;
+  background: #f2f2f2;
+}
+.clock{
+  width: 32rpx;
+  height: 32rpx;
+}
+.time{
+  font-size: 20rpx;
+  margin-left:30rpx;
+}
+.close{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 200rpx;
+}
+.history_list_line2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 4%;
+  height: 58rpx;
+  font-size: 30rpx;
+}
+.history_list_line3{
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  border-radius: 4%;
+  height: 58rpx;
+}
+.history_list_line3_item1{
+  font-size: 24rpx;
+  margin-left: 38%;
+}
+.history_list_line3_item2{
+  width: 32rpx;
+  height: 32rpx;
+}
+.history_list_line3_item3{
+  font-size: 24rpx;
+}
+.history_list_line3_item4{
+  font-size: 24rpx;
+  color: #ffffff;
+  background: #33ccff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   border-radius: 10%;
+  height: 58rpx;
+  width: 140rpx;
+  margin-left: 100rpx;
+}
+.history_list_line4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 4%;
+  height: 58rpx;
+  font-size: 30rpx;
+}
+.history_list_line5{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 4%;
+  height: 58rpx;
+  font-size: 20rpx;
+}

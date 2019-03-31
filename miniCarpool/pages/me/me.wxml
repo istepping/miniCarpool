@@ -1,2 +1,61 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<!--pages/my/my.wxml-->
+<view class='my_page'>
+  <view class='userinfor_page'>
+    <view style='margin:20rpx;text-align:center'>
+      <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>    
+    </view>
+    <view style='margin:10rpx;text-align:center;display:flex;justify-content: center;'>
+      <open-data class="open-data-userNickName line1" type="userNickName" lang="zh_CN"></open-data>
+    </view>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='list' hover-class='hover-contain' bindtap='jump_to_launch_list'>
+    <view class='list_left'>
+      <image src='/images/launch_list.png' class='png'></image>
+      <text class='list_text'>发起的拼单</text>
+    </view>
+    <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
+  </view>
+
+  <view class='list' hover-class='hover-contain' bindtap='jump_to_join_list'>
+    <view class='list_left'>
+      <image src='/images/join_list.png' class='png'></image>
+      <text class='list_text'>加入的拼单</text>
+    </view>
+    <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
+  </view>
+
+  <view class='list' hover-class='hover-contain' bindtap='jump_to_history_list'>
+    <view class='list_left'>
+      <image src='/images/history_list.png' class='png'></image>
+      <text class='list_text'>历史拼单</text>
+    </view>
+    <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
+  </view>
+
+  <view class='list' hover-class='hover-contain' bindtap='jump_to_help'>
+    <view class='list_left'>
+      <image src='/images/help.png' class='png'></image>
+      <text class='list_text'>使用帮助</text>
+    </view>
+    <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
+  </view>
+
+  <view class='list' hover-class='hover-contain' bindtap='jump_to_feedback'>
+    <view class='list_left'>
+      <image src='/images/feedback.png' class='png'></image>
+      <text class='list_text'>反馈</text>
+    </view>
+    <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
+  </view>
+
+  <view class='list' hover-class='hover-contain' bindtap='jump_to_aboutme'>
+    <view class='list_left'>
+      <image src='/images/aboutme.png' class='png'></image>
+      <text class='list_text'>关于我们</text>
+    </view>
+    <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
+  </view>
+</view>

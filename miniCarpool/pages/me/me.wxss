@@ -1,1 +1,67 @@
-/* pages/me/me.wxss */
+/* pages/my/my.wxss */
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+ 
+.line1{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis; 
+}
+ 
+.open-data-userAvatarUrl {
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20rpx auto;
+}
+.open-data-userNickName{
+  max-width: 200rpx;
+  display:block;
+}
+.list{
+  display: flex;
+  align-items: center;
+  margin-left: 40rpx;
+  margin-top: 70rpx;
+  margin-bottom: 70rpx;
+  margin-right: 30rpx;
+}
+.list_left{
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+.list_right{
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.png{
+  width: 64rpx;
+  height: 64rpx;
+}
+.list_text{
+  font-size: 28rpx; 
+}
+.png_1{
+  width: 32rpx;
+  height: 32rpx;
+}
+.line{
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 1rpx;
+  align-items: center;
+  justify-content: center;
+  background-color: #b2b2b2;
+}
+.hover-contain{
+  background: #f3f3f3
+}

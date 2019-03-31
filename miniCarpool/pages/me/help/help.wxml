@@ -1,0 +1,42 @@
+<!--pages/help/help.wxml-->
+<scroll-view class='scroll_help'
+ scroll-y
+ style="height: 100%;"
+ scroll-top="100rpx">
+ <text class='title'>使用帮助</text>
+ <view class='title_s'>
+  <text class='title_1'>1.易出行是什么？</text>
+ </view>
+ <view class='content'>
+  <text class='content_txt' space="emsp" decode="true">易出行是一款帮助学生组团出行的小程序。只需要在此程序中创建或加入符合自己出行要求的拼单即可，极大地方便了学生们的出行，节省了时间。</text>
+ </view>
+ <view class='title_s'>
+  <text class='title_1'>2.如何创建拼单？</text>
+ </view>
+ <view class='content'>
+  <text class='content_txt' space="emsp" decode="true">在首页处点击“创建拼单”按钮，即可进入创建页面，如图所示，按自己的需求进行填写，检查无误后，便可提交该订单。</text>
+ </view>
+ <image src='/images/pickure.png' class='pickure'></image>
+ <view class='title_s'>
+  <text class='title_1'>3.“最近”拼单与“最新”拼单有什么区别？</text>
+ </view>
+ <view class='content'>
+  <text class='content_txt' space="emsp" decode="true">“最近”拼单是按照出发时间进行排序，“最新”拼单是按照创建拼单时间进行排序。用户可根据自身的情况进行选择。</text>
+ </view>
+ <view class='title_s'>
+  <text class='title_1'>4.如何加入拼单？</text>
+ </view>
+ <view class='content'>
+  <text class='content_txt' space="emsp" decode="true">当您在“最近”或“最新”拼单发现一个符合自己出行需求的拼单后，阅读该拼单的详细需求后，若自己也满足此需求，即可点击“加入”按钮，进入该群聊，与此拼单中的其他成员进行聊天。当群成员达到规定数目病商讨一致后，便可组团出行。（备注：蓝色的拼单表示正在进行，灰色表示已取消。）
+  </text>
+ </view>
+ <view class='title_s'>
+  <text class='title_1'>5.聊天室的具体介绍。</text>
+ </view>
+ <view class='content'>
+  <text class='content_txt' space="emsp" decode="true">（1）若您创建了一个拼单，就自动创建了一个群聊，您被默认为该群聊群主。群主有可以更改该拼单的权限，通过点击群聊右上角的“齿轮”，进入页面后，点击“设置”即可修改相关信息。
+（2）若您只是加入该群聊，无权限更改拼单信息。
+（3）拼单完成后，群聊也会被取消。
+  </text>
+ </view>
+</scroll-view>

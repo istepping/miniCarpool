@@ -19,27 +19,27 @@ Page({
   },
   goCreatedList:function(){
   wx.navigateTo({
-      url: '/pages/home/hastory/hastory?id=1',
+      url: '/pages/me/history/history?id=1',
     })
   },
   goJoinedList:function(){
     wx.navigateTo({
-      url: '/pages/home/hastory/hastory?id=2',
+      url: '/pages/me/history/history?id=2',
     })
   },
   goHastoryList:function(){
     wx.navigateTo({
-      url: '/pages/home/hastory/hastory?id=3',
+      url: '/pages/me/history/history?id=3',
     })
   },
   goHelp:function(){
     wx.navigateTo({
-      url: '/pages/home/help/help',
+      url: '/pages/me/help/help',
     })
   },
   goSuggesstion:function(){
     wx.navigateTo({
-      url: '/pages/home/suggestion/suggestion',
+      url: '/pages/me/feedback/feedback',
     })
   },
   /**

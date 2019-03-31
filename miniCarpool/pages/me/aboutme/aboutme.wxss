@@ -1,0 +1,39 @@
+/**pages/index/index.wxss**/
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 34rpx;
+  padding: 15rpx;
+}
+.page-body{
+  width: 370rpx;
+  height: 496rpx;
+  text-align: center;
+  margin: 150rpx ;
+}
+.logo{
+  width: 370rpx;
+  height: 358rpx;
+  text-align: center;
+}
+.title{
+  width: 286rpx;
+  height: 92rpx;
+  text-align: center;
+}
+.version{
+  font-size: 40rpx;
+}
+.page-bottom{
+  width: 450rpx;
+  height: 154rpx;
+  text-align: center;
+  margin: 100rpx;
+}
+.title1{
+  font-size: 28rpx;
+  text-align: center;
+}

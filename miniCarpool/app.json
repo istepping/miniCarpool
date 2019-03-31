@@ -8,13 +8,15 @@
     "pages/home/create/create",
     "pages/home/create/success/success",
     "pages/new/new",
-    "pages/me/me",
     "pages/test/test",
     "pages/login/login",
-    "pages/home/hastory/hastory",
-    "pages/home/help/help",
-    "pages/home/suggestion/suggestion",
-    "pages/chat/chatSet/chatSet"
+    "pages/chat/chatSet/chatSet",
+    "pages/me/me",
+    "pages/me/aboutme/aboutme",
+    "pages/me/help/help",
+    "pages/me/history/history",
+    "pages/me/feedback/feedback",
+    "pages/me/feedback/success/success"
   ],
   "window": {
     "navigationBarBackgroundColor": "#3366FF",

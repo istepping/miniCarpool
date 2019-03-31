@@ -1,4 +1,4 @@
-// pages/me/me.js
+// pages/my/my.js
 Page({
 
   /**
@@ -62,5 +62,35 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  jump_to_launch_list: function () {
+    wx.navigateTo({
+      url: '/pages/me/history/history?id=1'
+    })
+  },
+  jump_to_join_list: function () {
+    wx.navigateTo({
+      url: '/pages/me/history/history?id=2'
+    })
+  },
+  jump_to_help: function () {
+    wx.navigateTo({
+      url: '/pages/me/help/help'
+    })
+  },
+  jump_to_history_list: function () {
+    wx.navigateTo({
+      url: '/pages/me/history/history?id=3'
+    })
+  },
+  jump_to_feedback: function () {
+    wx.navigateTo({
+      url: '/pages/me/feedback/feedback'
+    })
+  },
+  jump_to_aboutme: function () {
+    wx.navigateTo({
+      url: '/pages/me/aboutme/aboutme'
+    })
   }
 })

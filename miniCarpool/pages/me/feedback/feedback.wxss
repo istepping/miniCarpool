@@ -1,0 +1,49 @@
+/**index.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between;
+  font-size: 34rpx;
+  padding: 15rpx;
+}
+
+.areas {
+width: 700rpx;
+background: rgba(255, 255, 255, 1);
+font-size: 28rpx;
+text-indent: 28rpx;
+border: 1rpx solid gainsboro;
+margin: 100rpx auto;
+overflow: hidden;
+position: relative;
+}
+
+.currentWordNumber {
+font-size: 28rpx;
+color: gray;
+position: absolute;
+left: 550rpx;
+top: 250rpx;
+}
+
+ .text{
+  font-size: 28rpx;
+}
+
+.information{
+  width: 700rpx;
+  height: 80rpx;
+  background: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  text-indent: 28rpx;
+  border: 1rpx solid gainsboro;
+  margin: 20rpx auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.submit{
+  margin: 20rpx auto;
+  width: 320rpx;
+}
