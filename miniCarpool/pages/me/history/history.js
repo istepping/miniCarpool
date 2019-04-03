@@ -1,129 +1,44 @@
 // pages/history_list/history_list.js
+/**
+ * @author sunLei
+ * @time 2019/4/3
+ */
+var server=require('../../../utils/server.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    info: [{
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    },
-    {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }, {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }, {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }, {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }, {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }, {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }, {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }, {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }, {
-      list_state: "已结束",
-      list_clock_png_link: "/images/clock.png",
-      list_time: "2019-03-28 12:00",
-      list_start_place: "大连理工大学软件学院",
-      list_people_num: "3/4人",
-      list_down_png_link: "/images/down.png",
-      list_method: "网约车",
-      list_enter: "进入",
-      list_end_place: "大连周水子国际机场",
-      list_remarks: "备注：啦啦啦啦啦啦啦啦啦啦"
-    }]
+    id:0,
+    info: []
   },
-
+  getData:function(id){
+    //id决定请求参数
+    var that=this;
+    var requestUrl=['/user/getCreatedList','/user/getJoinList','/user/getHistoryList'];
+    //id=0,1,2
+    if(id>=0 && id<=2){
+      server.request(requestUrl[id],'',function(res){
+        that.setData({
+          info:res.data.data.historyList
+        })
+      })
+    }
+  },
+  delete_my_list:function(res){
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if(options.id!=null){
+      this.setData({
+        id: options.id
+      })
+    }
+    this.getData(this.data.id);
   },
 
   /**
@@ -158,7 +73,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.getData(this.data.id);
   },
 
   /**

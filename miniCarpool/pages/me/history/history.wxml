@@ -8,24 +8,25 @@
  <view class='history_list'>
 
  <view class='history_list_line1'>
- <view class='history_list_line1_item1'>{{item.list_state}}</view>
+ <view class='history_list_line1_item1' wx:if='{{item.state==-1}}'>已结束</view>
+  <view class='history_list_line1_item1' wx:elif='{{item.state==0}}'>正在进行</view>
  <view class='history_list_line1_item2'>
  <image src='{{item.list_clock_png_link}}' class='clock'></image>
- <text class='time'>{{item.list_time}}</text>
- <image src='/images/close.png' class='close' bindtap='delete_my_list'></image>
+ <text class='time'>{{item.carpoolList.lTime}}</text>
+ <image src='/images/close.png' class='close' bindtap='delete_my_list' data-id='{{index}}'></image>
  </view>
  </view>
 <view class='history_list_line2'>
-{{item.list_start_place}}
+{{item.carpoolList.lStartPlace}}
 </view>
 <view class='history_list_line3'>
-<text class='history_list_line3_item1'>{{item.list_people_num}}</text>
+<text class='history_list_line3_item1'>{{item.carpoolList.lNumber}}/{{item.carpoolList.lMaxNumber}}人</text>
 <image src='{{item.list_down_png_link}}' class='history_list_line3_item2'></image>
-<text class='history_list_line3_item3'>{{item.list_method}}</text>
+<text class='history_list_line3_item3'>{{item.carpoolList.lCarpoolMode}}</text>
 <view class='history_list_line3_item4'>{{item.list_enter}}</view>
 </view>
 <view class='history_list_line4'>
-{{item.list_end_place}}
+{{item.carpoolList.lEndPlace}}
 </view>
 <view class='history_list_line5'>{{item.list_remarks}}</view>
 
