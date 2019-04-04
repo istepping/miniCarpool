@@ -16,7 +16,8 @@ Page({
     hidenModel:true,
     isPull:true,
     toView:'bottom',
-    msgList:[]
+    msgList:[],
+    message:[]
   },
   sendChange:function(res){
     this.setData({
@@ -24,9 +25,9 @@ Page({
     })
   },
   goSet:function(res){
-    wx.navigateTo({
-      url: '/pages/chat/chatSet/chatSet?gId='+this.data.gId
-    })
+    // wx.navigateTo({
+    //   url: '/pages/chat/chatSet/chatSet?gId='+this.data.gId
+    // })
   },
   showDetail:function(res){
     if(this.data.hidenModel){
@@ -54,9 +55,6 @@ Page({
         title: '不能发送空消息',
       })
     }else{
-      wx.sendSocketMessage({
-        data: that.data.send_msg,
-      })
       //加入消息
       var time = new Date().getTime();
       var m_date="";
@@ -64,6 +62,7 @@ Page({
       m_date=util.toData(time, "Y-M-D h:m")
       m_time=util.toData(time, "Y-M-D h:m")
       console.log("1"+m_date+m_time);
+      //消息结构
       var message={
         msgId: "msg"+time,
         type: '文本',
@@ -77,6 +76,7 @@ Page({
         timestamp: time,
         state: 0
       }
+      //导入时间
       message.sendTime=m_date;
       message.time=m_time;
       console.log(message.sendTime);
@@ -84,14 +84,52 @@ Page({
       console.log(util.toData(new Date().getTime(), "Y-M-D h:m"))
       console.log(message);
       var temp=that.data.msgList;
+      //追加
       temp.push(message);
       that.setData({
         msgList:temp,
         toView: temp[temp.length - 1].msgId,
-        send_msg:''
+        send_msg:'',
+        message:message
+      });
+      //发送消息
+      wx.sendSocketMessage({
+        data: that.data.send_msg,
+        success: function (res) {
+          console.log("发送消息成功");
+          //更改消息状态
+          console.log(res);
+          var temp=that.data.msgList;
+          for (var i = 0; i < temp.length; i++){
+            if(temp[i].state==0 && temp[i].senderId==that.data.uId){
+              console.log("查找到消息");
+              temp[i].state=1;
+              break;
+            }
+          }
+          that.setData({
+            msgList:temp
+          })
+        },
+        fail: function (res) {
+          console.log("发送消息失败");
+          var temp = that.data.msgList;
+          for (var i = 0;i<temp.length;i++) {
+            if (temp[i].state == 0 && temp[i].uId == that.data.uId) {
+              console.log("查找到消息");
+              temp[i].state = -1;
+              break;
+            }
+          }
+          that.setData({
+            msgList: temp
+          })
+        },complete:function(res){
+          //保存消息
+          that.updateTime();
+          wx.setStorageSync(that.data.gId, that.data.msgList);
+        }
       })
-      this.updateTime();
-      wx.setStorageSync(this.data.gId, this.data.msgList);
     }
   },
   //消息时间跟新和跟新消息状态
@@ -205,40 +243,42 @@ Page({
       var data=JSON.parse(res.data);
       console.log(data);
       var temp=that.data.msgList;
+      //遍历接受到消息
       for(var i=0;i<data.length;i++){
         if(data[i].senderId==that.data.uId){
           //本人消息不重复加入
-          var temp=that.data.msgList;
-          var findMessage=false;
-          //逆序遍历
-          for(var j=temp.length-1;j>=0;j--){
-            if(findMessage==false && temp[j].state==0 && temp[j].msg==data[i].msg){
-              //发送中的消息
-              console.log("查找到消息");
-              temp[j].state=1;
-              temp[j].senderAvatar = data[i].senderAvatar;
-              temp[j].msgId = data[i].msgId;
-              temp[j].type = data[i].type;
-              temp[j].senderAvatar = data[i].senderAvatar;
-              temp[j].senderNickName = data[i].senderNickName;
-              temp[j].sendTime = util.toData(data[i].sendTime, 'Y-M-D h:m');
-              temp[j].timestamp = data[i].sendTime;
-              temp[j].time = util.toData(data[i].sendTime, 'h:m');
-              findMessage=true;
-            }
-            else if(findMessage==true && temp[j].state==0){
-              //未成功发送的消息
-              temp[j].state=-1;
-            }
-          }
-          console.log("遍历完成");
-          console.log(temp);
-          that.setData({
-            msgList:temp
-          })
-          wx.setStorageSync(that.data.gId, that.data.msgList);
-          console.log(that.data.msgList);
-          break;
+          continue;
+          // var temp=that.data.msgList;
+          // var findMessage=false;
+          // //逆序遍历
+          // for(var j=temp.length-1;j>=0;j--){
+          //   if(findMessage==false && temp[j].state==0 && temp[j].msg==data[i].msg){
+          //     //发送中的消息
+          //     console.log("查找到消息");
+          //     temp[j].state=1;
+          //     temp[j].senderAvatar = data[i].senderAvatar;
+          //     temp[j].msgId = data[i].msgId;
+          //     temp[j].type = data[i].type;
+          //     temp[j].senderAvatar = data[i].senderAvatar;
+          //     temp[j].senderNickName = data[i].senderNickName;
+          //     temp[j].sendTime = util.toData(data[i].sendTime, 'Y-M-D h:m');
+          //     temp[j].timestamp = data[i].sendTime;
+          //     temp[j].time = util.toData(data[i].sendTime, 'h:m');
+          //     findMessage=true;
+          //   }
+          //   else if(findMessage==true && temp[j].state==0){
+          //     //未成功发送的消息
+          //     temp[j].state=-1;
+          //   }
+          // }
+          // console.log("遍历完成");
+          // console.log(temp);
+          // that.setData({
+          //   msgList:temp
+          // })
+          // wx.setStorageSync(that.data.gId, that.data.msgList);
+          // console.log(that.data.msgList);
+          // break;
         }
         //其他人的消息,加入
         var m_timestamp = data[i].sendTime;
@@ -256,9 +296,9 @@ Page({
           state: 1
         }
         //判断是否为今天
-        // if(that.toDay(m_timestamp)){
-        //   message.isToday = true;
-        // }
+        if(that.isToday(m_timestamp)){
+          message.isToday = true;
+        }
         //追加到数组后面,滑动到末端
         temp.push(message);
         that.setData({
