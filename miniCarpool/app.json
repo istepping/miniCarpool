@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/test2/test2",
     "pages/home/home",
+    "pages/test2/test2",
+    
     "pages/chat/chat",
     "pages/near/near",
     "pages/home/create/create",
