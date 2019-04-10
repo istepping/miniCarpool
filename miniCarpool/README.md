@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @author sunLei
 ————————————————————————
 APPID:wx539fa405b462a369
@@ -66,3 +67,5 @@ sebSocket技术OK
 2. webSocket
 [界面](https://blog.csdn.net/java558/article/details/86001064)
 [源码前端+后端](https://github.com/itblingfeng)
+=======
+>>>>>>> 33d91b9d7280c2344405c6cb68a518a7105641aa

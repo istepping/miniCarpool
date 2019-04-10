@@ -17,7 +17,7 @@
     <!-- 循环消息 -->
     <block wx:key='' wx:for='{{msgList}}'>
       <!-- 时间 -->
-      <view class='time' wx:if="{{index%10==0}}">
+      <view class='time' wx:if="{{index%5==0}}">
         <view class='today' wx:if="{{item.isToday}}">
         {{item.time}}
         </view>
@@ -55,9 +55,8 @@
 
 <!-- 输入部分 -->
 <view class='bottom'>
-  <input class='input' placeholder='请输入...' bindinput='sendChange' value='{{send_msg}}' placeholder-class='placeholder'></input>
+  <input class='input' confirm-type='send' confirm-hold='{{true}}' placeholder='请输入...' bindinput='sendChange' value='{{send_msg}}' placeholder-class='placeholder' bindconfirm="send"></input>
   <image class='emoj' src='/images/chat/chat_emoj.png' bindtap='emoj'></image>
-  <image class='send' src='/images/chat/chat_send.png' bindtap='send'></image>
 </view>
 
 <!-- 提示框 -->
