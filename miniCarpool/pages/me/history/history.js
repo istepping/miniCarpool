@@ -19,7 +19,11 @@ Page({
     var requestUrl=['/user/getCreatedList','/user/getJoinList','/user/getHistoryList'];
     //id=0,1,2
     if(id>=0 && id<=2){
+      wx.showLoading({
+        title: '拼命加载中...',
+      })
       server.request(requestUrl[id],'',function(res){
+        wx.hideLoading();
         that.setData({
           info:res.data.data.historyList
         })

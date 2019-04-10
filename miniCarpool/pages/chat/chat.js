@@ -1,4 +1,5 @@
 // pages/chat/chat.js
+//sssssss
 var server=require("../../utils/server.js");
 var util=require("../../utils/util.js");
 Page({
