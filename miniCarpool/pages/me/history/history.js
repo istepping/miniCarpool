@@ -4,6 +4,7 @@
  * @time 2019/4/3
  */
 var server=require('../../../utils/server.js');
+var util=require("../../../utils/util.js");
 Page({
 
   /**
@@ -24,14 +25,51 @@ Page({
       })
       server.request(requestUrl[id],'',function(res){
         wx.hideLoading();
+        var carpoolList=res.data.data.historyList;
+        //转换时间
+        for (var i = 0; i < carpoolList.length; i++) {
+          carpoolList[i].carpoolList.lTime = util.toData(carpoolList[i].carpoolList.lTime, 'Y-M-D h:m');
+        }
         that.setData({
-          info:res.data.data.historyList
+          info:carpoolList
         })
       })
     }
   },
   delete_my_list:function(res){
-    
+    var that=this;
+    wx.showModal({
+      title: '提示',
+      content: '确认删除此拼单?',
+      success: function (e) {
+        if (e.confirm) {
+          //删除
+          wx.showLoading({
+            title: '删除中...',
+          })
+          server.request('/carpoolList/deleteCarpoolList', { lId: that.data.info[res.target.id].carpoolList.lId }, function (res) {
+            if (res.data.statusCode == "1") {
+              console.log("删除成功");
+              wx.showToast({
+                title: '删除成功',
+              });
+              var temp=that.data.info;
+              temp.splice(res.target.id,1);
+              that.setData({
+                info:temp
+              })
+            }
+          });
+        }
+      }
+    })
+  },
+  enter:function(res){
+    console.log(res);
+    console.log(this.data.info);
+    wx.navigateTo({
+      url: '/pages/chat/chat?gId=' + this.data.info[res.target.id].gId
+    })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -33,6 +33,17 @@
   margin-left: 10rpx;
   font-size: 24rpx;
 }
+.history_list_line1_item1_2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140rpx;
+  border-radius: 10%;
+  background: #33ccff;
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color:  black;
+}
 .history_list_line1_item2{
   display: flex;
   align-items: center;
@@ -88,10 +99,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-   border-radius: 10%;
+  border-radius: 10%;
   height: 58rpx;
   width: 140rpx;
-  margin-left: 100rpx;
+  float: right;
 }
 .history_list_line4{
   display: flex;
