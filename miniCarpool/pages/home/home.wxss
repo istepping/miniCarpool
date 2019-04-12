@@ -7,7 +7,19 @@
   width: 698rpx;
   height:164rpx;
   margin-left: 28rpx;
-  margin-top: 45rpx;
+  margin-top: 30rpx;
+}
+.notification{
+  width: 100%;
+  height: 40rpx;
+  font-size: 30rpx;
+  white-space: nowrap;
+  color: red;
+  animation:myfirst 40s linear infinite;
+  margin-top: 10rpx;
+}
+@keyframes myfirst{
+0% {margin-left:750rpx;} 100% {margin-left:-1000rpx; margin-left: -3400rpx;}
 }
 .function{
   background-image: url("https://www.billingf.xyz/carpool/images/home_function_back.png");
@@ -16,7 +28,7 @@
   width: 698rpx;
   height: 164rpx;
   margin-left: 28rpx;
-  margin-top: 10rpx;
+  margin-top: 5rpx;
   display: flex;
   flex-direction: row;
 }
@@ -45,18 +57,18 @@
 .help{
    width: 122rpx;
    height: 42rpx;
-   margin-top: 160rpx;
+   margin-top: 100rpx;
    margin-left: 235rpx;
 }
 .line{
   width: 2rpx;
   height: 42rpx;
-  margin-top: 160rpx;
+  margin-top: 100rpx;
   margin-left: 20rpx;
 }
 .suggestion{
   width: 122rpx;
   height: 42rpx;
-  margin-top: 160rpx;
+  margin-top: 100rpx;
   margin-left: 20rpx;
 }

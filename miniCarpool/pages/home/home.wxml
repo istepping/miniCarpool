@@ -1,12 +1,16 @@
 <!--pages/home/home.wxml-->
 <!-- 顶部 -->
 <image class='top' src='/images/home/home_top.png'></image>
+<!-- 公告栏 -->
+<view class='note'>
+  <view class='notification'>{{notice}}</view>
+</view>
 <!-- 功能业 -->
 <image class='home_create' src='/images/home/home_create.png' bindtap='createList'></image>
 <view class='function'>
   <image class='function1' src="/images/home/home_function1.png" bindtap='goCreatedList'></image>
   <image class='function2' src="/images/home/home_function2.png" bindtap='goJoinedList'></image>
-  <image class='function3' src="/images/home/home_function3.png" bindtap='goHastoryList'></image>
+  <image class='function3' src="/images/home/home_function3.png" bindtap='goHistoryList'></image>
 </view>
 <!-- 底部 -->
 <view class='bottom'>

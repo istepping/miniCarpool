@@ -41,12 +41,19 @@ Page({
     wx.showModal({
       title: '提示',
       content: '确认删除此拼单?',
+      fail:function(e){
+        console.log(e)
+      },
       success: function (e) {
+        console.log(e);
+        var id = res.target.id;
         if (e.confirm) {
           //删除
           wx.showLoading({
             title: '删除中...',
           })
+          console.log(that.data.info);
+          console.log(res);
           server.request('/carpoolList/deleteCarpoolList', { lId: that.data.info[res.target.id].carpoolList.lId }, function (res) {
             if (res.data.statusCode == "1") {
               console.log("删除成功");
@@ -54,7 +61,7 @@ Page({
                 title: '删除成功',
               });
               var temp=that.data.info;
-              temp.splice(res.target.id,1);
+              temp.splice(id,1);
               that.setData({
                 info:temp
               })
@@ -75,6 +82,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options);
     if(options.id!=null){
       this.setData({
         id: options.id
@@ -131,17 +139,4 @@ Page({
   onShareAppMessage: function () {
 
   },
-  delete_my_list: function (e) {
-    wx.showModal({
-      title: '提示',
-      content: '确定要删除该拼单吗',
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
-    })
-  }
 })

@@ -14,7 +14,7 @@
   <view class='list' hover-class='hover-contain' bindtap='jump_to_launch_list'>
     <view class='list_left'>
       <image src='/images/launch_list.png' class='png'></image>
-      <text class='list_text'>发起的拼单</text>
+      <text class='list_text'>发起的组团</text>
     </view>
     <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
   </view>
@@ -22,7 +22,7 @@
   <view class='list' hover-class='hover-contain' bindtap='jump_to_join_list'>
     <view class='list_left'>
       <image src='/images/join_list.png' class='png'></image>
-      <text class='list_text'>加入的拼单</text>
+      <text class='list_text'>加入的组团</text>
     </view>
     <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
   </view>
@@ -30,7 +30,7 @@
   <view class='list' hover-class='hover-contain' bindtap='jump_to_history_list'>
     <view class='list_left'>
       <image src='/images/history_list.png' class='png'></image>
-      <text class='list_text'>历史拼单</text>
+      <text class='list_text'>历史组团</text>
     </view>
     <view class='list_right'><image src='/images/more.png' class='png_1'></image></view>
   </view>

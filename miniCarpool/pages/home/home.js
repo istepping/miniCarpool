@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    notice:'本平台不提供实际拼车服务,致力于帮助大学生在寒暑假出行提供在线组团的功能。   本平台不提供实际拼车服务,致力于帮助大学生在寒暑假出行提供在线组团的功能。   本平台不提供实际拼车服务,致力于帮助大学生在寒暑假出行提供在线组团的功能'
   },
   //创建拼单
   createList:function(){
@@ -19,17 +19,17 @@ Page({
   },
   goCreatedList:function(){
   wx.navigateTo({
-      url: '/pages/me/history/history?id=1',
+      url: '/pages/me/history/history?id=0',
     })
   },
   goJoinedList:function(){
     wx.navigateTo({
-      url: '/pages/me/history/history?id=2',
+      url: '/pages/me/history/history?id=1',
     })
   },
-  goHastoryList:function(){
+  goHistoryList:function(){
     wx.navigateTo({
-      url: '/pages/me/history/history?id=3',
+      url: '/pages/me/history/history?id=2',
     })
   },
   goHelp:function(){

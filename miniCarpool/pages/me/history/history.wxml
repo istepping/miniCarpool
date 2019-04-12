@@ -13,7 +13,7 @@
  <view class='history_list_line1_item2'>
  <image src='{{item.list_clock_png_link}}' class='clock'></image>
  <text class='time'>{{item.carpoolList.lTime}}</text>
- <image src='/images/close.png' class='close' bindtap='delete_my_list' data-id='{{index}}'></image>
+ <image src='/images/close.png' class='close' bindtap='delete_my_list' id='{{index}}'></image>
  </view>
  </view>
 <view class='history_list_line2'>

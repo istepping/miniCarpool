@@ -3,7 +3,7 @@
   <!-- 列表 -->
     <view class='list' wx:for="{{carList}}" wx:key=''>
       <view class='line1'>
-        <text class='no'>拼单编号:{{item.carpoolList.lId}}</text>
+        <text class='no'>组团编号:{{item.carpoolList.lId}}</text>
         <image class='info' src='/images/list/list_info.png' bindtap='showDetail' id='{{index}}'></image>
         <image class='join' src='/images/list/list_join.png' bindtap='join' id='{{index}}'></image>
       </view>

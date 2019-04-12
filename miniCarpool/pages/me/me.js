@@ -65,12 +65,12 @@ Page({
   },
   jump_to_launch_list: function () {
     wx.navigateTo({
-      url: '/pages/me/history/history?id=1'
+      url: '/pages/me/history/history?id=0'
     })
   },
   jump_to_join_list: function () {
     wx.navigateTo({
-      url: '/pages/me/history/history?id=2'
+      url: '/pages/me/history/history?id=1'
     })
   },
   jump_to_help: function () {
@@ -80,7 +80,7 @@ Page({
   },
   jump_to_history_list: function () {
     wx.navigateTo({
-      url: '/pages/me/history/history?id=3'
+      url: '/pages/me/history/history?id=2'
     })
   },
   jump_to_feedback: function () {
