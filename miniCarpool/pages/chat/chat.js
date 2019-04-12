@@ -85,6 +85,7 @@ Page({
       console.log(util.toData(new Date().getTime(), "Y-M-D h:m"))
       console.log(message);
       var temp=that.data.msgList;
+      var msg=that.data.send_msg;
       //追加
       temp.push(message);
       that.setData({
@@ -95,7 +96,7 @@ Page({
       });
       //发送消息
       wx.sendSocketMessage({
-        data: that.data.send_msg,
+        data: msg,
         success: function (res) {
           console.log("发送消息成功");
           //更改消息状态
@@ -240,6 +241,7 @@ Page({
     })
     wx.onSocketMessage(function(res){
       console.log("获取到消息");
+      console.log(res);
       //接受到消息
       var data=JSON.parse(res.data);
       console.log(data);
