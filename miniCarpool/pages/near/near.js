@@ -33,6 +33,13 @@ Page({
       content: '是否加入?',
       success:function(e){
         if(e.confirm){
+          if (that.data.carList[res.currentTarget.id].carpoolList.lNumber >= that.data.carList[res.currentTarget.id].carpoolList.lMaxNumber){
+            wx.showToast({
+              title: '人数已满',
+              icon:'none'
+            })
+            return;
+          }
           //加入群聊
           console.log(that.data.carList[res.currentTarget.id]);
           var gId = that.data.carList[res.currentTarget.id].gId;
@@ -56,7 +63,7 @@ Page({
   },
   getData:function(page){
     var that=this;
-    server.request("/carpoolList/getCarpoolListByCreateTime",{page:page},function(res){
+    server.request("/carpoolList/getCarpoolListByTime",{page:page},function(res){
       //跟新数据
       var carpoolList=res.data.data.carpoolList;
       //转换时间

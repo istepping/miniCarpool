@@ -1,0 +1,10 @@
+/* pages/home/create/success/success.wxss */
+page{
+  background-image:url("https://www.billingf.xyz/carpool/images/create_success.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.container{
+  width: 100%;
+  height: 1200rpx;
+}

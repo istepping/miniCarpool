@@ -1,0 +1,36 @@
+<!--pages/near/near.wxml-->
+<view class='container'>
+    <view class='list' wx:for="{{carList}}" wx:key=''>
+      <view class='line1'>
+        <text class='no'>组团编号:{{item.carpoolList.lId}}</text>
+        <image class='info' src='/images/list/list_info.png' bindtap='showDetail' id='{{index}}'></image>
+        <image class='join' src='/images/list/list_join.png' bindtap='join' id='{{index}}'></image>
+      </view>
+      <view class='line2'>发起者：{{item.createName}}</view>
+      <view class='line2'>人数：{{item.carpoolList.lNumber}}/{{item.carpoolList.lMaxNumber}}</view>
+      <view class='line2' style='font-weight:600;'>始点：{{item.carpoolList.lStartPlace}}</view>
+      <view class='line2' style='font-weight:600;'>终点：{{item.carpoolList.lEndPlace}}</view>
+      <view class='line2' style='font-weight:600;'>时间：{{item.carpoolList.lTime}}</view>
+    </view>
+    <block wx:if='{{carList.length<carListTotal}}'>
+      <text class='bottom_text'>努力加载中...</text>
+    </block>
+    <block wx:else>
+      <text class='bottom_text'>——————没有更多了——————</text>
+    </block>
+  <view class='modalDlg' wx:if='{{showDetail}}'>
+     <view class='line1'>
+        <text class='no'>拼单编号:{{item.carpoolList.lId}}</text>
+        <image class='cancel' src='/images/list/list_cancel.png' bindtap='cancel'></image>
+      </view>
+      <view class='line2'>发起者：{{item.createName}}</view>
+      <view class='line2'>人数：{{item.carpoolList.lNumber}}/{{item.carpoolList.lMaxNumber}}</view>
+      <view class='line2' style='font-weight:600;'>始点：{{item.carpoolList.lStartPlace}}</view>
+      <view class='line2' style='font-weight:600;'>终点：{{item.carpoolList.lEndPlace}}</view>
+      <view class='line2' style='font-weight:600;'>时间：{{item.carpoolList.lTime}}</view>
+      <view class='line2'>出行方式：{{item.carpoolList.lCarpoolMode}}</view>
+      <view class='line2'>性别要求：{{item.carpoolList.lGenderRequirement}}</view>
+      <view class='line2'>是否有车：{{item.carpoolList.lHasCar}}</view>
+      <view class='line2'>备注：{{item.carpoolList.lExtra}}</view>
+  </view>
+</view>

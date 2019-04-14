@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+<form bindsubmit='formSubmit'>
+  <textarea class="areas" placeholder='请写清楚您的问题，以便我们能更好的帮助到您！' 
+          minlength="{{min}}" maxlength="{{max}}" bindinput="inputs" name="inputs">
+      <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+  </textarea>
+  <text class='text'>请填入有效的联系方式以便开发者能联系到您（选填）</text>
+  <input class='information' placeholder='邮箱 /手机号' bindinput='info' name='info'></input>
+  <button class='submit' type='primary' form-type='submit'>提交</button>
+</form>
+</view>

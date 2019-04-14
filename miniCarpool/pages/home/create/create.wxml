@@ -64,7 +64,7 @@
 
     <view class='line3'>
       <text class='label2'>备注：</text>
-      <textarea class='extra' placeholder='请输入备注信息' placeholder-class='placeholer' type='text' value='{{create_extra}}'></textarea>
+      <textarea class='extra' placeholder='请输入备注信息' placeholder-class='placeholer' type='text' value='{{create_extra}}' bindinput='extraChange'></textarea>
     </view>
 </view>
 <!-- 提交 -->

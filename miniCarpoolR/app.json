@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/chat/chat",
+    "pages/near/near",
+    "pages/home/create/create",
+    "pages/home/create/success/success",
+    "pages/new/new",
+    "pages/login/login",
+    "pages/chat/chatSet/chatSet",
+    "pages/me/me",
+    "pages/me/aboutme/aboutme",
+    "pages/me/help/help",
+    "pages/me/history/history",
+    "pages/me/feedback/feedback",
+    "pages/me/feedback/success/success"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#3366FF",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "易出行",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/near/near",
+        "text": "最近",
+        "iconPath": "images/near.png",
+        "selectedIconPath": "images/near_selected.png"
+      },
+      {
+        "pagePath": "pages/new/new",
+        "text": "最新",
+        "iconPath": "images/new.png",
+        "selectedIconPath": "images/new_selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -5,7 +5,7 @@
 const baseUrl ="https://www.billingf.xyz/carpool"
 const testUrl ="http://127.0.0.1:8080"
 
-const actualBaseUrl=baseUrl;
+const actualBaseUrl=testUrl;
 const request=(url,data='',callBack,method='GET')=>{
   var actualUrl = actualBaseUrl + url;//实际地址
   var token = wx.getStorageSync("token");//获取存储数据
@@ -29,12 +29,13 @@ const request=(url,data='',callBack,method='GET')=>{
     success(res){
       console.log(actualUrl+"请求返回:");
       console.log(res);
-      wx.hideLoading();
       callBack(res);
     },
     fail(error){
-      wx.hideLoading();
       console.log(error);//错误日志
+    },
+    complete(res){
+      wx.hideLoading();
     }
   })
 }
