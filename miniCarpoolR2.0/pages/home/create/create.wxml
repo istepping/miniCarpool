@@ -1,0 +1,59 @@
+<view class='form'>
+  <view class='line1'>
+    <text class='label' style='font-weight: 600;'>* 主题：</text>
+    <input class='input_content' placeholder='请输入组团主题' placeholder-class='placeholer' type='text' bindinput='startChange'></input>
+    <image hidden='{{isHidden[0]}}' class='icon' src='/images/create/icon.png'></image>
+  </view>
+  <view class='line1'>
+    <text class='label' style='font-weight: 600;'>* 描述：</text>
+    <input class='input_content' placeholder='请输入组团描述' placeholder-class='placeholer' type='text' bindinput='endChange'></input>
+    <image hidden='{{isHidden[1]}}' class='icon' src='/images/create/icon.png'></image>
+  </view>
+    <view class='line1'>
+    <text class='label' style='font-weight: 600;'>* 时间：</text>
+    <picker bindtap='' end="2050-1-1" mode="date" bindchange='dateChange'>
+      <view class='picker_content'>{{create_date}}</view>
+    </picker>
+        <picker bindtap='' mode="time" value='12:00'  bindchange='timeChange'>
+      <view class='picker_content'>{{create_time}}</view>
+    </picker>
+    <image hidden='{{isHidden[2]}}' class='icon' src='/images/create/icon.png'></image>
+  </view>
+    <view class='line1'>
+      <text class='label' style='font-weight: 600;'>* 人数：</text>
+      <picker bindtap='' value='2' range='{{numberRange}}' bindchange='numberChange'>
+        <view class='number_content'>{{create_number}}</view>
+      </picker>
+      <image hidden='{{isHidden[3]}}' class='icon' src='/images/create/icon.png'></image>
+    </view>
+    <view class='line1'>
+      <text class='label'>性别要求：</text>
+      <radio-group class='radio-group' bindchange='sexRadioChange'>
+        <radio class='radio'wx:for="{{sexItem}}" wx:key='' value='{{item}}'>{{item}}</radio>
+      </radio-group>
+      <image hidden='{{isHidden[4]}}' class='icon' src='/images/create/icon.png'></image>
+    </view>
+    <view class='line1'>
+      <text class='label'>是否已有车：</text>
+      <radio-group class='radio-group' bindchange='hasCarRadioChange'>
+        <radio class='radio2' value='是'>是</radio>
+        <radio class='radio' value='否'>否</radio>
+      </radio-group>
+      <image hidden='{{isHidden[5]}}' class='icon2' src='/images/create/icon.png'></image>
+    </view>
+    <view class='line2'>
+      <view class='way'>
+      <text class='label'>组团类别：</text>
+      <image hidden='{{isHidden[6]}}' class='icon3' src='/images/create/icon.png'></image>
+      </view>
+      <radio-group class='radio-group' bindchange='carRadioChange'>
+        <radio class='radio' wx:for="{{carItem}}" wx:key='' value='{{item}}'>{{item}}</radio>
+      </radio-group>
+    </view>
+
+    <view class='line3'>
+      <text class='label2'>备注：</text>
+      <textarea class='extra' placeholder='请输入备注信息' placeholder-class='placeholer' type='text' value='{{create_extra}}' bindinput='extraChange'></textarea>
+    </view>
+</view>
+<image class='submit' src='/images/create/create_button.png' bindtap='submit'></image>

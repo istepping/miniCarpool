@@ -1,0 +1,35 @@
+<!--pages/history_list/history_list.wxml-->
+<scroll-view class='scroll_history_list'
+ scroll-y
+ style="height: 100%;"
+ scroll-top="100rpx">
+
+<block wx:for="{{info}}" wx:key='' wx:for-index="index" wx:for-item="item">
+ <view class='history_list'>
+
+ <view class='history_list_line1'>
+ <view class='history_list_line1_item1' wx:if='{{item.state==-1}}'>已结束</view>
+  <view class='history_list_line1_item1_2' wx:elif='{{item.state==0}}'>正在进行</view>
+ <view class='history_list_line1_item2'>
+ <image src='{{item.list_clock_png_link}}' class='clock'></image>
+ <text class='time'>{{item.carpoolList.lTime}}</text>
+ <image src='/images/close.png' class='close' bindtap='delete_my_list' id='{{index}}'></image>
+ </view>
+ </view>
+<view class='history_list_line2'>
+{{item.carpoolList.lStartPlace}}
+</view>
+<view class='history_list_line3'>
+<text class='history_list_line3_item1'>{{item.carpoolList.lNumber}}/{{item.carpoolList.lMaxNumber}}人</text>
+<image src='/images/down.png' class='history_list_line3_item2'></image>
+<text class='history_list_line3_item3'>{{item.carpoolList.lCarpoolMode}}</text>
+<view class='history_list_line3_item4' bindtap='enter' id="{{index}}">进入</view>
+</view>
+<view class='history_list_line4'>
+{{item.carpoolList.lEndPlace}}
+</view>
+<view class='history_list_line5'>{{item.list_remarks}}</view>
+
+ </view>
+ </block>
+ </scroll-view>

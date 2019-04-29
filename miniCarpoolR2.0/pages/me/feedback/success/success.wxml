@@ -1,0 +1,7 @@
+<!--success.wxml-->
+<view class="group" bindtap='back'>
+  <icon class="successicon" type="success" size="200rpx" />
+  <view class="successinfo1">提交成功</view>
+  <view class="successinfo2">感谢您的反馈</view>
+  <view class="successinfo3">点击任意处返回</view>
+</view>
