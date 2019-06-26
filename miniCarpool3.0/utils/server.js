@@ -3,21 +3,14 @@
  * @time 2019/3/28
  */
 const baseUrl ="https://www.billingf.xyz/carpool"
-const testUrl ="http://127.0.0.1:8080"
-
+const testUrl = "http://127.0.0.1:8080"
 const actualBaseUrl=baseUrl;
 const request=(url,data='',callBack,method='GET')=>{
-  var actualUrl = actualBaseUrl + url;//实际地址
-  var token = wx.getStorageSync("token");//获取存储数据
+  var actualUrl = actualBaseUrl + url;
+  var token = wx.getStorageSync("token");
   if(token===null || token===''){
     return;
   }
-
-  console.log("发出请求:"+actualUrl);//请求日志
-  console.log("请求参数:");
-  console.log(data);
-  
-  //请求数据
   wx.request({
     url: actualUrl,
     data: data,
@@ -27,19 +20,15 @@ const request=(url,data='',callBack,method='GET')=>{
       "authorization": token
     },
     success(res){
-      console.log(actualUrl+"请求返回:");
-      console.log(res);
+      wx.hideLoading();
       callBack(res);
     },
     fail(error){
-      console.log(error);//错误日志
-    },
-    complete(res){
       wx.hideLoading();
     }
   })
 }
-const getUserInfo=()=>{
+const updateUserInfo=()=>{
   wx.getSetting({
     success: function (res) {
       if (res.authSetting['scope.userInfo']) {
@@ -54,9 +43,14 @@ const getUserInfo=()=>{
               nickName: res.userInfo.nickName,
               province: res.userInfo.province
             }
+            console.log("跟新信息到服务器")
+            //存储服务器
             request("/user/addUserInfo", data, function (res) {
-
+              console.log(res);
             })
+            //同时存储本地
+            wx.setStorageSync("avatar", data.avatarUrl);
+            wx.setStorageSync("nickName", data.nickName);
           }
         })
       } else {
@@ -69,5 +63,5 @@ const getUserInfo=()=>{
 }
 module.exports = {
   request:request,
-  getUserInfo:getUserInfo
+  updateUserInfo:updateUserInfo
 }

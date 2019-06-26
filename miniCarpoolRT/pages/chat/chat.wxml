@@ -1,0 +1,73 @@
+<!--pages/chat/chat.wxml-->
+<!-- 顶部 -->
+<view class='top'>
+  <view class='line1'>
+    <text class='name'>拼单编号:{{groupInfo.carpoolList.lId}}</text>
+    <text class='number'>人数:{{groupInfo.carpoolList.lNumber}}/{{groupInfo.carpoolList.lMaxNumber}}</text>
+    <image class='set' src='/images/chat/chat_set.png' bindtap='goSet'></image>
+  </view>
+  <view class='line2'>
+    <image class='pull' src='{{isPull? "/images/chat/chat_pull.png":"/images/chat/chat_push.png"}}' bindtap='showDetail'></image>
+  </view>
+</view>
+
+<!-- 中间消息 -->
+<view>
+  <scroll-view scroll-y="{{true}}" scroll-into-view='{{toView}}' style="height:{{scrollHeight}}" class='message'>
+    <!-- 循环消息 -->
+    <block wx:key='' wx:for='{{msgList}}'>
+      <!-- 时间 -->
+      <view class='time' wx:if="{{index%5==0}}">
+        <view class='today' wx:if="{{item.isToday}}">
+        {{item.time}}
+        </view>
+        <view class='before' wx:else>
+        {{item.sendTime}}
+        </view>
+      </view>
+      <!-- 右侧消息 -->
+      <view class='right' wx:if="{{item.senderId==uId}}" id='{{item.msgId}}'>
+        <view class='sender'>
+          <image class='avatar' src='{{item.senderAvatar}}'></image>
+          <text class='nickName'>{{item.senderNickName}}</text>
+        </view>
+        <view class='triangle'></view>
+        <view class='msg'>
+          {{item.msg}}
+        </view>
+        <image wx:if="{{item.state==0}}" class='noticeImage' src='/images/chat/loading.gif'></image>
+        <image wx:elif="{{item.state==-1}}" class='noticeImage' src='/images/chat/fail_send.png'></image>
+      </view>
+       <!-- 左侧消息 -->
+       <view class='left' wx:else id='{{item.msgId}}'>
+        <view class='sender'>
+          <image class='avatar' src='{{item.senderAvatar}}'></image>
+          <text class='nickName'>{{item.senderNickName}}</text>
+        </view>
+        <view class='triangle'></view>
+        <view class='msg'>
+          {{item.msg}}
+        </view>
+       </view>
+    </block>
+  </scroll-view>
+</view>
+
+<!-- 输入部分 -->
+<view class='bottom'>
+  <input class='input' confirm-type='send' confirm-hold='{{true}}' placeholder='请输入...' bindinput='sendChange' value='{{send_msg}}' placeholder-class='placeholder' bindconfirm="send"></input>
+  <image class='emoj' src='/images/chat/chat_emoj.png' bindtap='emoj'></image>
+</view>
+
+<!-- 提示框 -->
+<view class='model' hidden='{{hidenModel}}'>
+  <view class='line2'>发起者：{{groupInfo.createUser.uNickName}}</view>
+  <view class='line2'>人数：{{groupInfo.carpoolList.lNumber}}/{{groupInfo.carpoolList.lMaxNumber}}</view>
+  <view class='line2' style='font-weight:600;'>始点：{{groupInfo.carpoolList.lStartPlace}}</view>
+  <view class='line2' style='font-weight:600;'>终点：{{groupInfo.carpoolList.lEndPlace}}</view>
+  <view class='line2' style='font-weight:600;'>时间：{{groupInfo.carpoolList.lTime}}</view>
+  <view class='line2'>出行方式：{{groupInfo.carpoolList.lCarpoolMode}}</view>
+  <view class='line2'>性别要求：{{groupInfo.carpoolList.lGenderRequirement}}</view>
+  <view class='line2'>是否有车：{{groupInfo.carpoolList.lHasCar}}</view>
+  <view class='line2'>备注：{{groupInfo.carpoolList.lExtra}}</view>
+</view>

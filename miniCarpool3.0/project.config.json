@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.0",
 	"appid": "wx539fa405b462a369",
-	"projectname": "miniCarpoolR",
+	"projectname": "miniCarpool",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

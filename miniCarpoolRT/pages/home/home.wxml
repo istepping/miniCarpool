@@ -1,0 +1,15 @@
+<image class='top' src='/images/home/home_top.png'></image>
+<view class='note'>
+  <view class='notification'>{{notice}}</view>
+</view>
+<image class='home_create' src='/images/home/home_create.png' bindtap='createList'></image>
+<view class='function'>
+  <image class='function1' src="/images/home/home_function1.png" bindtap='goCreatedList'></image>
+  <image class='function2' src="/images/home/home_function2.png" bindtap='goJoinedList'></image>
+  <image class='function3' src="/images/home/home_function3.png" bindtap='goHistoryList'></image>
+</view>
+<view class='bottom'>
+ <image class='help' bindtap='goHelp' src='/images/home/home_help.png'></image>
+ <image class='line' src='/images/home/home_line.png'></image>
+ <image class='suggestion' bindtap='goSuggesstion' src='/images/home/home_suggestion.png'></image>
+</view>

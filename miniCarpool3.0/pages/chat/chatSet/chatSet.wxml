@@ -1,0 +1,66 @@
+<!--pages/setup/setup.wxml-->
+<view class='setup'>
+ <view class='line_1'>
+ <view class='line_1_item1'>群聊成员</view>
+ </view>
+
+ <view class='line_2'>
+ <image class="open-data-userAvatarUrl" src='{{item.uAvatarUrl}}' wx:for='{{data.users}}' wx:key='' bindtap='lookInfo' id='{{index}}'></image>
+ </view>
+
+ <view class='line1'></view>
+
+ <view class='line_3' bindtap='changeGroupName'>
+  <view class='list_left'>
+   <text class='line_3_item1'>群聊名称</text>
+  </view>
+  <view class='list_right'>
+   <image src='/images/more.png' class='png_1'></image>
+   <text class='line_3_item2'>{{name}}</text>
+  </view>
+ </view>
+ 
+ <view class='line2'></view>
+
+ <view class='line_4'>
+  <view class='list_left'>
+   <text class='line_4_item1'>我在本群的昵称</text>
+  </view>
+  <view class='list_right'>
+   <image src='/images/more.png' class='png_1'></image>
+   <open-data class='line_4_item2' type='userNickName'></open-data>
+  </view>
+ </view>
+
+ <view class='line3'></view>
+
+ <view class='line_5'>
+  <view class='list_left'>
+   <text class='line_5_item1'>群主昵称</text>
+  </view>
+  <view class='list_right'>
+   <image src='/images/more.png' class='png_1'></image>
+   <text class='line_4_item2'>{{data.createUser.uNickName}}</text>
+  </view>
+ </view>
+
+ <view class='line3'></view>
+
+ <view class='line_6' bindtap='group_notice'>群公告</view>
+
+ <view class='line3'></view>
+
+ <view class='line_7' bindtap='exit_list'>退出拼单及群聊</view>
+
+ <view class='line2'></view>
+
+ <modal hidden="{{hidden}}" title="群公告" confirm-text="确定" cancel-text="取消" bindconfirm="confirmNotice" bindcancel="cancelNotice" wx:if='{{uId==data.createUser.uId}}'>
+     <textarea type='text' placeholder="编辑群公告..." bindinput='getGroupNotice' value='{{notice}}'/>
+ </modal>
+  <modal hidden="{{hidden}}" title="群公告" confirm-text="确定" no-cancel='{{true}}' bindconfirm="cancelNotice" wx:else>
+     <view class='notice'>{{notice}}</view>
+ </modal>
+  <modal hidden="{{hidden2}}" title="修改群名称" confirm-text="保存" cancel-text="取消" bindconfirm="confirmName" bindcancel='cancleName'>
+     <input type='text' placeholder="输入群名称..." bindinput='getGroupName' value='{{groupName}}'/>
+ </modal>
+</view>

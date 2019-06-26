@@ -3,21 +3,13 @@
  * @time 2019/3/28
  */
 const baseUrl ="https://www.billingf.xyz/carpool"
-const testUrl ="http://127.0.0.1:8080"
-
 const actualBaseUrl=baseUrl;
 const request=(url,data='',callBack,method='GET')=>{
-  var actualUrl = actualBaseUrl + url;//实际地址
-  var token = wx.getStorageSync("token");//获取存储数据
+  var actualUrl = actualBaseUrl + url;
+  var token = wx.getStorageSync("token");
   if(token===null || token===''){
     return;
   }
-
-  console.log("发出请求:"+actualUrl);//请求日志
-  console.log("请求参数:");
-  console.log(data);
-  
-  //请求数据
   wx.request({
     url: actualUrl,
     data: data,
@@ -27,14 +19,10 @@ const request=(url,data='',callBack,method='GET')=>{
       "authorization": token
     },
     success(res){
-      console.log(actualUrl+"请求返回:");
-      console.log(res);
+      wx.hideLoading();
       callBack(res);
     },
     fail(error){
-      console.log(error);//错误日志
-    },
-    complete(res){
       wx.hideLoading();
     }
   })
@@ -54,9 +42,7 @@ const getUserInfo=()=>{
               nickName: res.userInfo.nickName,
               province: res.userInfo.province
             }
-            request("/user/addUserInfo", data, function (res) {
-
-            })
+            request("/user/addUserInfo", data, function (res) {})
           }
         })
       } else {

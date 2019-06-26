@@ -1,0 +1,30 @@
+/* pages/help/help.wxss */
+.scroll_help{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  font-size: 48rpx;
+  display: flex;
+  justify-content: center;
+}
+.title_s{
+  margin-top: 10rpx;
+}
+.title_1{
+  font-size: 40rpx;
+}
+.content{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10rpx;
+}
+.pickure{
+  width: 80%;
+  height: 400rpx;
+  margin-top: 10rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+}

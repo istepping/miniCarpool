@@ -1,0 +1,74 @@
+/* pages/home/home.wxss */
+.top{
+  width: 100%;
+  height: 470rpx;
+}
+.home_create{
+  width: 698rpx;
+  height:164rpx;
+  margin-left: 28rpx;
+  margin-top: 30rpx;
+}
+.notification{
+  width: 100%;
+  height: 40rpx;
+  font-size: 30rpx;
+  white-space: nowrap;
+  color: red;
+  animation:myfirst 40s linear infinite;
+  margin-top: 10rpx;
+}
+@keyframes myfirst{
+0% {margin-left:750rpx;} 100% {margin-left:-1000rpx; margin-left: -3400rpx;}
+}
+.function{
+  background-image: url("https://www.billingf.xyz/carpool/images/home_function_back.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 698rpx;
+  height: 164rpx;
+  margin-left: 28rpx;
+  margin-top: 5rpx;
+  display: flex;
+  flex-direction: row;
+}
+.function1{
+  width: 170rpx;
+  height: 112rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.function2{
+  width: 174rpx;
+  height: 116rpx;
+  margin-top: 30rpx;
+  margin-left: 71rpx;
+}
+.function3{
+  width: 118rpx;
+  height: 114rpx;
+  margin-top: 30rpx;
+  margin-left: 80rpx;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+}
+.help{
+   width: 122rpx;
+   height: 42rpx;
+   margin-top: 80rpx;
+   margin-left: 235rpx;
+}
+.line{
+  width: 2rpx;
+  height: 42rpx;
+  margin-top: 80rpx;
+  margin-left: 20rpx;
+}
+.suggestion{
+  width: 122rpx;
+  height: 42rpx;
+  margin-top: 80rpx;
+  margin-left: 20rpx;
+}

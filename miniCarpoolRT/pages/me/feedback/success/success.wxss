@@ -1,0 +1,31 @@
+/**success.wxss**/
+.group{
+  position: fixed;
+   display: flex;
+  flex-direction: column;
+  height:100%;
+  width: 100%;
+  justify-content: center;
+  padding: 15rpx;
+  align-items: center;
+}
+
+/**.successicon{
+  margin-top: 350rpx;
+}**/
+
+.successinfo1{
+   font-size: 36rpx;
+   color: black;
+}
+
+.successinfo2{
+   font-size: 24rpx;
+   color: gray;
+}
+
+.successinfo3{
+  margin-top: 200rpx;
+  font-size: 24 rpx;
+  color:gray;
+}

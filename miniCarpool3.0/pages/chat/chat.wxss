@@ -1,0 +1,214 @@
+/* pages/chat/chat.wxss */
+.top{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  background: #D7D7D7;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+}
+.line1{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.name{
+  font-size: 30rpx;
+  width: 250rpx;
+  text-align: center;
+}
+.number{
+  font-size: 30rpx;
+  justify-content: center;
+  margin-left: 0rpx;
+  width: 250rpx;
+  text-align: center;
+}
+.set{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 180rpx;
+}
+.line2{
+  width: 100%;
+  height: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center
+}
+.pull{
+  width: 64rpx;
+  height: 38rpx;
+  margin: auto;
+}
+.message{
+  width: 100%;
+  height: 1000rpx;
+  margin-top: 80rpx;
+}
+.time{
+  width: 100%;
+  height: 50rpx;
+  font-size: 25rpx;
+  color: rgba(43, 39, 39, 0.623);
+  font-weight: 300;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.left{
+  width: 100%;
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.left .sender{
+  width: 64rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.left .sender .avatar{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+.left .sender .nickName{
+  width: 100rpx;
+  height: 22rpx;
+  font-size: 20rpx;
+  margin-top: 5rpx;
+  text-align: center;
+}
+.left .triangle{
+  width: 0; 
+  height: 0; 
+  border-top: 20rpx solid transparent; 
+  border-right: 40rpx solid #FFEFDB; 
+  border-bottom: 15rpx solid transparent;
+  margin-top: 20rpx;
+}
+.right{
+  width: 100%;
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.right .msg{
+  width: 300rpx;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  background:  #F0F0F0;
+  border-radius: 7px;   
+  padding: 0rpx 30rpx 0rpx 30rpx;
+  word-break: break-all
+}
+.right .triangle{
+  width: 0; 
+  height: 0; 
+  border-top: 20rpx solid transparent; 
+  border-left: 40rpx solid #F0F0F0; 
+  border-bottom: 20rpx solid transparent; 
+  margin-top: 20rpx;
+}
+.right .sender{
+  width: 64rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10rpx;
+}
+.right .sender .avatar{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+.right .sender .nickName{
+  width: 100rpx;
+  height: 22rpx;
+  font-size: 20rpx;
+  margin-top: 5rpx;
+  text-align: center;
+}
+.left .msg{
+  width: 300rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  background: #FFEFDB;
+  border-radius: 7px;   
+  padding: 0rpx 30rpx 0rpx 30rpx;
+  word-break: break-all
+}
+.bottom{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  border-top: 1rpx solid #e5e5e5;
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+}
+.input{
+  width: 600rpx;
+  height: 70rpx;
+  border: 2rpx solid #D7D7D7;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+.placeholder{
+  font-size: 30rpx;
+}
+.emoj{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+.send{
+  width: 100rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+.line2{
+  height:32rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 300; 
+}
+.model{
+  width: 100%;
+  height: 350rpx;
+  position: fixed;
+  top: 80rpx;
+  left: 0rpx;
+  background:#D7D7D7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.noticeImage{
+  width: 20rpx;
+  height: 20rpx;
+  margin-top: 40rpx;
+  margin-right: 10rpx;
+}

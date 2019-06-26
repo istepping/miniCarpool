@@ -1,0 +1,2 @@
+<!--pages/home/create/success/success.wxml-->
+<view class='container' bindtap='goHome'></view>
