@@ -20,6 +20,7 @@ const request=(url,data='',callBack,method='GET')=>{
       "authorization": token
     },
     success(res){
+      console.log(res);
       wx.hideLoading();
       callBack(res);
     },

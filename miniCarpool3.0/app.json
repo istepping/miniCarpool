@@ -3,9 +3,10 @@
     "pages/home/home",
     "pages/chat/chat",
     "pages/near/near",
+    "pages/community/community",
+    "pages/create_tip/create_tip",
     "pages/home/create/create",
     "pages/home/create/success/success",
-    "pages/new/new",
     "pages/login/login",
     "pages/chat/chatSet/chatSet",
     "pages/me/me",
@@ -39,10 +40,10 @@
         "selectedIconPath": "images/near_selected.png"
       },
       {
-        "pagePath": "pages/new/new",
-        "text": "最新",
-        "iconPath": "images/new.png",
-        "selectedIconPath": "images/new_selected.png"
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "images/community.png",
+        "selectedIconPath": "images/community_selected.png"
       },
       {
         "pagePath": "pages/me/me",

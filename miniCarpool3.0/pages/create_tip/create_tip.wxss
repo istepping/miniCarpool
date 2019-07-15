@@ -1,0 +1,34 @@
+/* pages/create_tip/create_tip.wxss */
+.deliver_icon{
+  position: fixed;
+  width: 64rpx;
+  height: 64rpx;
+  bottom: 60rpx;
+  right: 50rpx;
+}
+.text{
+  display: block;
+  width: 96%;
+  margin-left: 1%;
+  /* height: 310rpx; */
+  margin-top: 20rpx;
+  border-style: solid;
+  border-width: medium;
+  border-color: #fdfdfd;
+  border-radius: 1%;
+  box-shadow: 4rpx -4rpx 2rpx 2rpx #d8d8d8;
+  background: #fdfdfd;
+}
+.text_1{
+  display: block;
+  width: 96%;
+  margin-left: 1%;
+  /* height: 310rpx; */
+  margin-top: 50rpx;
+  border-style: solid;
+  border-width: medium;
+  border-color: #ffffff;
+  border-radius: 1%;
+  box-shadow: 4rpx -4rpx 2rpx 2rpx #d8d8d8;
+  background: #ffffff;
+}

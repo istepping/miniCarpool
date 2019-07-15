@@ -1,0 +1,10 @@
+<!--pages/create_tip/create_tip.wxml-->
+<view class='text'>
+<input class='input_title' placeholder='标题' bindinput='input_1'></input>
+</view>
+<view class='text_1'>
+<textarea class='input_content' placeholder='请输入内容' bindinput='input_2'></textarea>
+</view>
+<view class='deliver' bindtap='deliver_action'>
+<image class='deliver_icon' src='/images/deliver.png'></image>
+</view>
