@@ -1,47 +1,43 @@
 <!--pages/community/community.wxml-->
-<scroll-view class='scroll_community_list'
- scroll-y
- style="height: 100%;"
- scroll-top="100rpx">
-<view bindtap='add'>
-<image class='add_icon' src='/images/add.png'></image>
-</view>
-<block wx:for="{{comment}}" wx:key='' wx:for-index="index" wx:for-item="item">
- <view class='community_list' bindtap='appearance' data-id='{{index}}'>
-  <view class='community_list_line1'>
-   <image src='{{item.user.uAvatarUrl}}' class="open-data-userAvatarUrl"></image>
-   <view class="open-data-userNickName line1">{{item.user.uNickName}}</view>
+<scroll-view class='scroll_community_list' scroll-y style="height: 100%;" scroll-top="100rpx">
+  <view bindtap='add'>
+    <image class='add_icon' src='/images/add.png'></image>
   </view>
-  <view class='community_list_line2 font-break'>
-   <text class='text_template'>{{item.post.pTitle}}</text>
-  </view>
-  <view class='community_list_line3 font-break'>
-   <text class='text_template_1'>{{item.post.pContent}}</text>
-  </view>
-  <view class='community_list_line4'>
-   <!-- <text class='text_template_2'>{{item.post.pTime}}</text> -->
-   <view class='click_image' catchtap='change_image' data-id='{{index}}'>
-    <image src='/images/acclaim_selected.png' class='image_1' wx:if="{{item.is_like}}"></image>
-    <image src='/images/acclaim.png' class='image_1' wx:else></image>
-   </view>
-   <text class='number'>{{item.post.pLike}}</text>
-   <image class='image_2' src='/images/comment.png' catchtap='stretch' data-id='{{index}}'></image>
-  </view>
- </view>
- <modal hidden="{{hiddenmodalput}}" title="请输入评论" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" data-id='{{index}}'>  
-    <input placeholder="请输入内容" bindinput='input_comment'></input>
- </modal>
- <block wx:for="{{item.info}}" wx:key='' wx:for-index="index_s" wx:for-item="item_s" wx:if="{{item.is_visible}}">
- <view class='detail'>
-  <view class='user_info'>
-   <open-data class="open-data-userAvatarUrl_1" type="userAvatarUrl"></open-data>
-   <open-data class="open-data-userNickName_1 line1" type="userNickName" lang="zh_CN"></open-data>
-  </view>
-  <view class='comment_detail'>
-   <view class='comment_content font-break'>{{item_s.comments}}</view>
-   <view class='comment_time'>评论于 {{item_s.time}}</view>
-  </view>
- </view>
- </block>
-</block>
+  <block wx:for="{{comment}}" wx:key='' wx:for-index="index" wx:for-item="item">
+    <view class='community_list' bindtap='appearance' data-id='{{index}}'>
+      <view class='community_list_line1'>
+        <image src='{{item.user.uAvatarUrl}}' class="open-data-userAvatarUrl"></image>
+        <view class="open-data-userNickName line1">{{item.user.uNickName}}</view>
+      </view>
+      <view class='community_list_line2 font-break'>
+        <text class='text_template'>{{item.post.pTitle}}</text>
+      </view>
+      <view class='community_list_line3 font-break'>
+        <text class='text_template_1'>{{item.post.pContent}}</text>
+      </view>
+      <view class='community_list_line4'>
+        <!-- <text class='text_template_2'>{{item.post.pTime}}</text> -->
+        <view class='click_image' catchtap='change_image' data-id='{{index}}'>
+          <image src='/images/acclaim_selected.png' class='image_1' wx:if="{{item.is_like}}"></image>
+          <image src='/images/acclaim.png' class='image_1' wx:else></image>
+        </view>
+        <text class='number'>{{item.post.pLike}}</text>
+        <image class='image_2' src='/images/comment.png' catchtap='stretch' data-id='{{index}}' data-pid='{{item.post.pId}}'></image>
+      </view>
+    </view>
+    <block wx:if="{{item.visible}}" wx:for="{{item.report}}" wx:key='' wx:for-item='item1' wx:for-index='index1'>
+      <view class='detail'>
+        <view class='user_info'>
+          <image class="open-data-userAvatarUrl_1" src='{{item1.user.uAvatarUrl}}'></image>
+          <view class="open-data-userNickName_1 line1">{{item1.user.uNickName}}</view>
+        </view>
+        <view class='comment_detail'>
+          <view class='comment_content font-break'>{{item1.comment.cContent}}</view>
+        </view>
+      </view>
+    </block>
+  </block>
 </scroll-view>
+<modal hidden="{{hiddenmodalput}}" title="请输入评论" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" data-id='{{index}}'>
+  <input placeholder="请输入内容" bindinput='input_comment' value='{{submit}}'></input>
+</modal>

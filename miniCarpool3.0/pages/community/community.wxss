@@ -96,7 +96,7 @@ margin-left: 20rpx;
   height: 32rpx;
   width: 32rpx;
   /* margin-right: 50rpx; */
-  margin-left: 350rpx
+  margin-left: 600rpx
 }
 .image_2{
   height: 32rpx;
