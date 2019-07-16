@@ -25,6 +25,14 @@ Page({
     });
   }, 
   confirm: function (e) {
+    if(this.data.submit==''){
+      wx.showToast({
+        title: '请输入内容',
+        icon:'none',
+        duration:500
+      })
+      return;
+    }
     var that=this;
     this.setData({
       hiddenmodalput: true

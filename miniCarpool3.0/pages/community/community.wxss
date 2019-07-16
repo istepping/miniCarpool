@@ -3,8 +3,8 @@
   position: fixed;
   width: 64rpx;
   height: 64rpx;
-  bottom: 60rpx;
-  right: 50rpx;
+  top: 50rpx;
+  right: 0rpx;
 }
 .reload_icon{
   position: fixed;
@@ -93,16 +93,16 @@ color: #7e7e7e;
 margin-left: 20rpx;
 } */
 .image_1{
-  height: 32rpx;
-  width: 32rpx;
+  height: 48rpx;
+  width: 48rpx;
   /* margin-right: 50rpx; */
-  margin-left: 600rpx
+  margin-left: 550rpx
 }
 .image_2{
-  height: 32rpx;
-  width: 32rpx;
+  height: 48rpx;
+  width: 48rpx;
   /* margin-left: 350rpx; */
-  margin-left: 20rpx
+  margin-left: 40rpx
 }
 .detail{
   display: block;
